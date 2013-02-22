@@ -1,0 +1,37 @@
+{
+  "name": "node-gloth",
+  "version": "0.0.0",
+  "description": "glob expansion with hooks",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "bugs": {
+    "url": "https://github.com/IndigoUnited/dejavu/issues/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/IndigoUnited/node-gloth.git"
+  },
+  "keywords": [
+    "glob",
+    "expansion",
+    "files",
+    "file",
+    "hook",
+    "hooks",
+    "filter"
+  ],
+  "author": "IndigoUnited <hello@indigounited.com> (http://indigounited.com)",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "3e662691e98d95e11dafc40fc3b52a66ea536e7f",
+  "dependencies": {
+    "async": "~0.2.5",
+    "glob": "~3.1.20",
+    "minimatch": "~0.2.9"
+  },
+  "devDependencies": {
+    "mocha": "~1.8.1"
+  }
+}
