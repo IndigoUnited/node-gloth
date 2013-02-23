@@ -4,11 +4,12 @@ var glob = require('glob');
 
 function globHook(pattern, options) {
     return function (matches, next) {
-        glob(pattern, options || {}, function (err, matches) {
+        glob(pattern, options || {}, function (err, globMatches) {
             if (err) {
                 return next(err);
             }
 
+            matches.push.apply(matches, globMatches);
             next(null, matches);
         });
     };
@@ -17,7 +18,7 @@ function globHook(pattern, options) {
 function globHookSync(pattern, options) {
     return function (matches) {
         var globMatches = glob.sync(pattern, options || {});
-        matches.apply(matches, globMatches);
+        matches.push.apply(matches, globMatches);
 
         return matches;
     };

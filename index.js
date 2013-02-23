@@ -28,12 +28,14 @@ function gloth(patterns, options, cb) {
                 return next(err);
             }
 
+            matches = hookMatches;
+
             // Check if the hook passed an array
             if (!Array.isArray(matches)) {
                 return next(new Error('Hook ' + hookName(hook, i) + ' did not passed an array.'));
             }
 
-            matches = hookMatches;
+            next();
         });
     }, function (err) {
         if (err) {
@@ -74,7 +76,7 @@ function glothSync(patterns, options, cb) {
 
 function toHooks(patterns, options, async) {
     // Ensure array
-    patterns = typeof patterns === 'string' ? [patterns] : patterns;
+    patterns = !Array.isArray(patterns) ? [patterns] : patterns;
 
     // Return an array of hooks based on each pattern
     return patterns.map(function (pattern, i) {
@@ -82,10 +84,10 @@ function toHooks(patterns, options, async) {
 
         // Replace include/exclude patterns with the built-in hooks
         if (typeof pattern === 'string') {
-            if (pattern.charAt(0) === '!') {
-                return excludeHook(pattern);
-            } else {
+            if (pattern.charAt(0) !== '!') {
                 return async ? globHook(pattern, options) : globHook.sync(pattern, options);
+            } else {
+                pattern = excludeHook(pattern.substr(1));
             }
         }
 
@@ -126,9 +128,10 @@ function unique(arr) {
     var index = {},
         newArr = [],
         i,
+        length = arr.length,
         curr;
 
-    for (i = arr.length - 1; i >= 0; i -= 1) {
+    for (i = 0; i < length; i += 1) {
         curr = arr[i];
 
         if (!index[curr]) {

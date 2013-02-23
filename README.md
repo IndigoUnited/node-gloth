@@ -1,7 +1,16 @@
-gloth
-==========
+# gloth #
+---
 
-An extension to glob that supports hooks. Possible to use asynchrounously and synchronously.
+[![Build Status](https://secure.travis-ci.org/IndigoUnited/node-gloth.png)](http://travis-ci.org/IndigoUnited/node-gloth.png)
+
+Multiple glob expansions with exclusions and hooks. Possible to use asynchrounously and synchronously.
+
+## Installation ##
+
+`$ npm install gloth`
+
+
+## Usage ##
 
 ```js
 var excludeSizeHigherThen = require('hooks/excludeSizeHigherThen');
@@ -34,7 +43,7 @@ module.exports = function (size) {
 };
 ```
 
-The hook above was written synchronously. The asynchronous version would look like:
+The hook above was written synchronously. The asynchronous version would be:
 
 ```js
 var fs    = require('fs');
@@ -55,4 +64,12 @@ module.exports = function (size) {
 };
 ```
 
+For more information on hooks are done, people check the built-in hooks in the source code.
+The `options` available are the same as the [glob](https://github.com/isaacs/node-glob) ones.
+
 __IMPORTANT__: sync hooks can be run in gloth async and sync, but async hooks can only be used with gloth async.
+
+
+## License ##
+
+Released under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
