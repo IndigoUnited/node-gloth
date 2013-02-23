@@ -64,7 +64,7 @@ module.exports = function (size) {
 };
 ```
 
-For more information on hooks are done, people check the built-in hooks in the source code.
+For more information on how hooks are done, please check the built-in hooks in the source code.
 The `options` available are the same as the [glob](https://github.com/isaacs/node-glob) ones.
 
 __IMPORTANT__: sync hooks can be run in gloth async and sync, but async hooks can only be used with gloth async.
