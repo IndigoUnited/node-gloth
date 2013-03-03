@@ -22,6 +22,12 @@ function globHook(pattern, options) {
 }
 
 function globHookSync(pattern, options) {
+    options = options || {};
+
+    if (!options.hasOwnProperty('mark')) {
+        options.mark = true;
+    }
+
     return function (matches) {
         var globMatches = glob.sync(pattern, options || {});
         matches.push.apply(matches, globMatches);

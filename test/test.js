@@ -24,7 +24,7 @@ describe('async usage', function () {
 
             assertExpected(matches, [
                 'test/assets/folder1/subfolder/subfile.html',
-                'test/assets/folder1/subfolder',
+                'test/assets/folder1/subfolder/',
                 'test/assets/folder1/file2.css',
                 'test/assets/folder1/file1.js'
             ]);
@@ -41,7 +41,7 @@ describe('async usage', function () {
 
             assertExpected(matches, [
                 'subfolder/subfile.html',
-                'subfolder',
+                'subfolder/',
                 'file2.css',
                 'file1.js',
                 '.dotfile'
@@ -59,7 +59,7 @@ describe('async usage', function () {
 
             assertExpected(matches, [
                 'folder1/subfolder/subfile.html',
-                'folder1/subfolder',
+                'folder1/subfolder/',
                 'folder1/file2.css',
                 'folder1/file1.js',
                 'folder2/image.png'
@@ -77,7 +77,7 @@ describe('async usage', function () {
 
             assertExpected(matches, [
                 'folder1/file2.css',
-                'folder1/subfolder',
+                'folder1/subfolder/',
                 'folder1/subfolder/subfile.html'
             ]);
 
@@ -114,7 +114,7 @@ describe('async usage', function () {
 
             assertExpected(matches, [
                 'subfolder/subfile.html',
-                'subfolder',
+                'subfolder/',
                 'file2.css',
                 'file1.js'
             ]);
@@ -176,7 +176,7 @@ describe('sync usage', function () {
 
         assertExpected(matches, [
             'test/assets/folder1/subfolder/subfile.html',
-            'test/assets/folder1/subfolder',
+            'test/assets/folder1/subfolder/',
             'test/assets/folder1/file2.css',
             'test/assets/folder1/file1.js'
         ]);
@@ -187,7 +187,7 @@ describe('sync usage', function () {
 
         assertExpected(matches, [
             'subfolder/subfile.html',
-            'subfolder',
+            'subfolder/',
             'file2.css',
             'file1.js',
             '.dotfile'
@@ -199,7 +199,7 @@ describe('sync usage', function () {
 
         assertExpected(matches, [
             'folder1/subfolder/subfile.html',
-            'folder1/subfolder',
+            'folder1/subfolder/',
             'folder1/file2.css',
             'folder1/file1.js',
             'folder2/image.png'
@@ -214,7 +214,7 @@ describe('sync usage', function () {
 
         assertExpected(matches, [
             'folder1/file2.css',
-            'folder1/subfolder',
+            'folder1/subfolder/',
             'folder1/subfolder/subfile.html'
         ]);
     });
@@ -241,7 +241,7 @@ describe('sync usage', function () {
 
         assertExpected(matches, [
             'subfolder/subfile.html',
-            'subfolder',
+            'subfolder/',
             'file2.css',
             'file1.js'
         ]);
@@ -286,7 +286,7 @@ describe('exclusion patterns', function () {
             '**/*',
             '!/video.mp4',
             '!./*.png',              // test with relative patterns
-            '!./subfolder',
+            '!./subfolder/',
             '!./subfolder/*.html',
             '!/subfolder/*.pdf'
         ], { cwd: 'test/assets/folder2' });
@@ -303,7 +303,7 @@ describe('exclusion patterns', function () {
         assertExpected(matches, [
             'subfolder/document.pdf',
             'subfolder/page.html',
-            'subfolder',
+            'subfolder/',
             'image.png'
         ]);
     });
