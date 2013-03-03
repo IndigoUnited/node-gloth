@@ -14,7 +14,17 @@ function excludeHook(pattern, options) {
 
     return function (matches) {
         return matches.filter(function (match) {
-            return !minimatch(match, pattern, options);
+            var matched = minimatch(match, pattern, options);
+
+            if (matched) {
+                return false;
+            }
+
+            if (!matched && pattern.substr(0, 2) === './') {
+                return !minimatch(match, pattern.substr(2), options);
+            }
+
+            return true;
         });
     };
 }

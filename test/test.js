@@ -283,8 +283,12 @@ describe('exclusion patterns', function () {
 
     it('should exclude matches based on their complete name if the pattern starts with a /', function () {
         var matches = gloth.sync([
-            '**/*.mp4',
-            '!/video.mp4'
+            '**/*',
+            '!/video.mp4',
+            '!./*.png',              // test with relative patterns
+            '!./subfolder',
+            '!./subfolder/*.html',
+            '!/subfolder/*.pdf'
         ], { cwd: 'test/assets/folder2' });
 
         assertExpected(matches, ['subfolder/video.mp4']);
