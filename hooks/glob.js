@@ -3,6 +3,12 @@
 var glob = require('glob');
 
 function globHook(pattern, options) {
+    options = options || {};
+
+    if (!options.hasOwnProperty('mark')) {
+        options.mark = true;
+    }
+
     return function (matches, next) {
         glob(pattern, options || {}, function (err, globMatches) {
             if (err) {
