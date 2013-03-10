@@ -20,6 +20,7 @@ function excludeHook(pattern, options) {
                 return false;
             }
 
+            // Check if a relative pattern was used and try it
             if (!matched && pattern.substr(0, 2) === './') {
                 return !minimatch(match, pattern.substr(2), options);
             }
