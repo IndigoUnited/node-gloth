@@ -1,16 +1,16 @@
-# gloth #
+# gloth
 ---
 
 [![Build Status](https://secure.travis-ci.org/IndigoUnited/node-gloth.png)](http://travis-ci.org/IndigoUnited/node-gloth.png)
 
 Multiple glob expansions with exclusions and hooks. Possible to use asynchrounously and synchronously.
 
-## Installation ##
+## Installation
 
 `$ npm install gloth`
 
 
-## Usage ##
+## Usage
 
 ```js
 var excludeSizeHigherThen = require('hooks/excludeSizeHigherThen');
@@ -70,6 +70,6 @@ The `options` available are the same as the [glob](https://github.com/isaacs/nod
 __IMPORTANT__: sync hooks can be run in gloth async and sync, but async hooks can only be used with gloth async.
 
 
-## License ##
+## License
 
 Released under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
