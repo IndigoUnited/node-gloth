@@ -1,5 +1,4 @@
 # gloth
----
 
 [![Build Status](https://secure.travis-ci.org/IndigoUnited/node-gloth.png)](http://travis-ci.org/IndigoUnited/node-gloth.png)
 
