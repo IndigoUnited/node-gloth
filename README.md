@@ -1,6 +1,4 @@
-# gloth
-
-[![Build Status](https://secure.travis-ci.org/IndigoUnited/node-gloth.png)](http://travis-ci.org/IndigoUnited/node-gloth.png)
+# gloth [![Build Status](https://secure.travis-ci.org/IndigoUnited/node-gloth.png)](http://travis-ci.org/IndigoUnited/node-gloth.png)
 
 Multiple glob expansions with exclusions and hooks. Possible to use asynchrounously and synchronously.
 
