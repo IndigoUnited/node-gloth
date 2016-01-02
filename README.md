@@ -1,6 +1,19 @@
-# gloth [![Build Status](https://travis-ci.org/IndigoUnited/node-gloth.svg?branch=master)](https://travis-ci.org/IndigoUnited/node-gloth.svg?branch=master)
+# gloth
 
-Multiple glob expansions with exclusions and hooks. Possible to use asynchrounously and synchronously.
+[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
+
+[npm-url]:https://npmjs.org/package/gloth
+[downloads-image]:http://img.shields.io/npm/dm/gloth.svg
+[npm-image]:http://img.shields.io/npm/v/gloth.svg
+[travis-url]:https://travis-ci.org/IndigoUnited/node-gloth
+[travis-image]:http://img.shields.io/travis/IndigoUnited/node-gloth.svg
+[david-dm-url]:https://david-dm.org/IndigoUnited/node-gloth
+[david-dm-image]:https://img.shields.io/david/IndigoUnited/node-gloth.svg
+[david-dm-dev-url]:https://david-dm.org/IndigoUnited/node-gloth#info=devDependencies
+[david-dm-dev-image]:https://img.shields.io/david/dev/IndigoUnited/node-gloth.svg
+
+Multiple glob expansions with exclusions and hooks. Possible to use asynchronously and synchronously.
+
 
 ## Installation
 
