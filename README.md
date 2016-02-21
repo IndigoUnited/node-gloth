@@ -6,7 +6,7 @@
 [downloads-image]:http://img.shields.io/npm/dm/gloth.svg
 [npm-image]:http://img.shields.io/npm/v/gloth.svg
 [travis-url]:https://travis-ci.org/IndigoUnited/node-gloth
-[travis-image]:http://img.shields.io/travis/IndigoUnited/node-gloth.svg
+[travis-image]:http://img.shields.io/travis/IndigoUnited/node-gloth/master.svg
 [david-dm-url]:https://david-dm.org/IndigoUnited/node-gloth
 [david-dm-image]:https://img.shields.io/david/IndigoUnited/node-gloth.svg
 [david-dm-dev-url]:https://david-dm.org/IndigoUnited/node-gloth#info=devDependencies
