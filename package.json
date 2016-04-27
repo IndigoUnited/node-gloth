@@ -30,8 +30,8 @@
     "minimatch": "^3.0.0"
   },
   "devDependencies": {
-    "array-differ": "^1.0.0",
     "expect.js": "^0.3.1",
+    "lodash.difference": "^4.2.0",
     "mocha": "^2.1.0"
   }
 }

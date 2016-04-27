@@ -2,7 +2,7 @@
 
 var gloth = require('../index');
 var expect = require('expect.js');
-var difference = require('array-differ');
+var difference = require('lodash.difference');
 
 function assertExpected(result, expected) {
     expect(result).to.be.an('array');
