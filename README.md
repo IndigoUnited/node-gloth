@@ -9,7 +9,7 @@
 [travis-image]:http://img.shields.io/travis/IndigoUnited/node-gloth/master.svg
 [david-dm-url]:https://david-dm.org/IndigoUnited/node-gloth
 [david-dm-image]:https://img.shields.io/david/IndigoUnited/node-gloth.svg
-[david-dm-dev-url]:https://david-dm.org/IndigoUnited/node-gloth#info=devDependencies
+[david-dm-dev-url]:https://david-dm.org/IndigoUnited/node-gloth?type=dev
 [david-dm-dev-image]:https://img.shields.io/david/dev/IndigoUnited/node-gloth.svg
 
 Multiple glob expansions with exclusions and hooks. Possible to use asynchronously and synchronously.
